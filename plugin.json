@@ -1,0 +1,31 @@
+{
+  "name": "siyuan-plugin-feishu-todo-sync",
+  "version": "0.4.3",
+  "minAppVersion": "3.8.0",
+  "author": "springqq",
+  "url": "https://github.com/spring-admin/siyuan-plugin-feishu-todo-sync",
+  "displayName": {
+    "default": "Feishu Todo Sync",
+    "zh-CN": "飞书待办同步"
+  },
+  "description": {
+    "default": "Bidirectional sync between SiYuan and Feishu tasks: completion status, delete/move-out title markers, multi-tasklist, backup before clear (WebDAV/OSS), and redacted AI diagnostics.",
+    "zh-CN": "在思源待办与飞书任务间双向同步：支持完成状态、删除/移出的标题标注、多清单选择、清空前备份（WebDAV/OSS）与脱敏 AI 诊断。"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh-CN": "README.md"
+  },
+  "frontends": [
+    "desktop"
+  ],
+  "keywords": [
+    "feishu",
+    "todo",
+    "task",
+    "sync",
+    "飞书",
+    "待办",
+    "同步"
+  ]
+}
