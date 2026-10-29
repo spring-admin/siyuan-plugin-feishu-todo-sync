@@ -50,3 +50,4 @@
 
 - 读取任务插件存储：`data/storage/petal/siyuan-plugin-task-note-management/reminder.json`、`categories.json`。
 - 飞书 → 思源写回 `reminder.json`（分类为「飞书待办」）。
+**测试**：测试
