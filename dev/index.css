@@ -1,0 +1,253 @@
+/* 飞书待办同步 —— 主题自适应样式 */
+.feishu-todo-sync-cats {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 220px;
+    overflow: auto;
+    padding: 4px 2px;
+}
+
+.feishu-todo-sync-cats label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: var(--b3-border-radius);
+}
+
+.feishu-todo-sync-cats label:hover {
+    background: var(--b3-theme-background-light);
+}
+
+.feishu-todo-sync-status {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--b3-theme-on-surface);
+    background: var(--b3-theme-background-light);
+    border: 1px solid var(--b3-border-color);
+    border-radius: var(--b3-border-radius);
+    padding: 8px 10px;
+    max-height: 220px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: var(--b3-font-family-code, monospace);
+}
+
+.feishu-todo-sync-hint {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--b3-theme-on-surface);
+    opacity: 0.7;
+}
+
+.feishu-todo-sync-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--b3-border-color);
+}
+
+.feishu-todo-sync-badge--ok {
+    color: var(--b3-theme-success);
+    border-color: var(--b3-theme-success);
+}
+
+.feishu-todo-sync-badge--busy {
+    color: var(--b3-theme-primary);
+    border-color: var(--b3-theme-primary);
+}
+
+.feishu-todo-sync-badge--err {
+    color: var(--b3-theme-error);
+    border-color: var(--b3-theme-error);
+}
+
+@media (max-width: 768px) {
+    .feishu-todo-sync-cats {
+        max-height: 160px;
+    }
+
+    .feishu-todo-sync-status {
+        max-height: 160px;
+    }
+}
+
+/* 分区侧边栏设置面板 */
+.ftsd {
+    display: flex;
+    height: 460px;
+    border: 1px solid var(--b3-border-color);
+    border-radius: var(--b3-border-radius);
+    overflow: hidden;
+}
+
+.ftsd-nav {
+    width: 132px;
+    flex: 0 0 132px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+    background: var(--b3-theme-background-light);
+    border-right: 1px solid var(--b3-border-color);
+    overflow: auto;
+}
+
+.ftsd-nav-item {
+    text-align: left;
+    padding: 7px 10px;
+    border: none;
+    background: transparent;
+    color: var(--b3-theme-on-surface);
+    border-radius: var(--b3-border-radius);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.ftsd-nav-item:hover {
+    background: var(--b3-theme-background);
+}
+
+.ftsd-nav-item.is-active {
+    background: var(--b3-theme-surface-lighter, var(--b3-theme-background));
+    color: var(--b3-theme-primary);
+    font-weight: 600;
+}
+
+.ftsd-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.ftsd-body {
+    flex: 1;
+    padding: 14px 18px;
+    overflow: auto;
+}
+
+.ftsd-footer {
+    padding: 10px 18px;
+    border-top: 1px solid var(--b3-border-color);
+    text-align: right;
+}
+
+.ftsd-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ftsd-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ftsd-label {
+    font-size: 13px;
+    color: var(--b3-theme-on-surface);
+    opacity: 0.85;
+}
+
+.ftsd-input {
+    display: flex;
+}
+
+.ftsd-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .ftsd {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .ftsd-nav {
+        width: auto;
+        flex: none;
+        flex-direction: row;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--b3-border-color);
+    }
+
+    .ftsd-nav-item {
+        white-space: nowrap;
+    }
+}
+
+/* AI 对话 */
+.ftsd-ai {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+}
+
+.ftsd-ai-log {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 4px;
+}
+
+.ftsd-ai-msg {
+    display: flex;
+}
+
+.ftsd-ai-user {
+    justify-content: flex-end;
+}
+
+.ftsd-ai-assistant {
+    justify-content: flex-start;
+}
+
+.ftsd-ai-bubble {
+    max-width: 78%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.ftsd-ai-user .ftsd-ai-bubble {
+    background: var(--b3-theme-primary-lightest, var(--b3-theme-background-light));
+    color: var(--b3-theme-primary);
+}
+
+.ftsd-ai-assistant .ftsd-ai-bubble {
+    background: var(--b3-theme-background-light);
+    color: var(--b3-theme-on-surface);
+    border: 1px solid var(--b3-border-color);
+}
+
+.ftsd-ai-input {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    border-top: 1px solid var(--b3-border-color);
+    padding-top: 10px;
+}
+
+.ftsd-ai-input textarea {
+    flex: 1;
+    resize: none;
+}
